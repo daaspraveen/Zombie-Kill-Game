@@ -14,22 +14,20 @@ body {
   color: white;
   /* overflow: hidden; */
   background: black;
-  background-image: radial-gradient(
-      at 47% 33%,
+  background-image: radial-gradient(at 47% 33%,
       hsl(282, 92%, 19%) 0,
-      transparent 59%
-    ),
+      transparent 59%),
     radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
 }
 
-.main-logo{
-        width: 100%;
-        aspect-ratio: 1/1;
-        max-width: 80px;
-        min-width: 40px;
-        animation: onLoadLogo 2s ease-in-out 0s 1 forwards;
-        position: absolute;
-        z-index: 15;
+.main-logo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 80px;
+  min-width: 40px;
+  animation: onLoadLogo 2s ease-in-out 0s 1 forwards;
+  position: absolute;
+  z-index: 15;
 }
 
 @keyframes onLoadLogo {
@@ -37,13 +35,16 @@ body {
     opacity: 0.3;
     max-width: 0;
   }
-  30%,70%{
-        max-width: 150px;
-        opacity: 1;
-        top: 40%;
+
+  30%,
+  70% {
+    max-width: 150px;
+    opacity: 1;
+    top: 40%;
   }
+
   100% {
-        max-width: 80px;
+    max-width: 80px;
     top: 10px;
   }
 }
@@ -70,6 +71,8 @@ button:hover {
 
 .start-screen,
 .game-over {
+  width: 90%;
+  max-width: 500px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -88,39 +91,46 @@ button:hover {
 }
 
 .start-screen {
-        
-        opacity: 0;
-        transform: translateY(-100vh);
+
+  opacity: 0;
+  transform: translateY(-100vh);
   top: 30%;
-  max-width: 95%;
-   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-   animation: onLoad 1.2s ease-in-out 2s 1 forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: onLoad 1.2s ease-in-out 2s 1 forwards;
 }
+
 @keyframes onLoad {
   0% {
     opacity: 0;
     transform: translateY(-100vh);
-  }33% {
-        opacity: 0.3;
-        transform: translateY(0vh);
-      }70% {
-        opacity: 0.6;
-        transform: translateY(-5vh);
-      }
+  }
+
+  33% {
+    opacity: 0.3;
+    transform: translateY(0vh);
+  }
+
+  70% {
+    opacity: 0.6;
+    transform: translateY(-5vh);
+  }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.start-screen > button:first-of-type {
+.start-screen>button:first-of-type {
   background-color: seagreen;
   font-size: 14px;
+
   &:hover {
     background-color: green;
   }
 }
-.start-screen > button:nth-of-type(2):hover {
+
+.start-screen>button:nth-of-type(2):hover {
   background-color: steelblue;
 }
 
@@ -130,79 +140,96 @@ button:hover {
   gap: 10px;
   padding: 30px;
 }
+
 .gameover-head {
   font-family: cursive;
   font-size: 28px;
 }
+
 .final-score-para {
   font-size: 14px;
   font-weight: 500;
 }
-.final-score-para> b:nth-last-of-type(){
-        font-size: 16px;
-        font-weight: 600;
+
+.final-score-para>b:nth-last-of-type() {
+  font-size: 16px;
+  font-weight: 600;
 }
+
 .tryAgainBtn {
   background-color: #000;
   color: #fff;
   font-weight: 600;
   font-size: 14px;
 }
+
 .tryAgainBtn:hover {
   background-color: orangered;
 }
-.feedback-btn a{
+
+.feedback-btn a {
   color: #fff;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 input {
   min-width: 150px;
-  max-width: 95%;
+  width: 95%;
+  max-width: 250px;
   padding: 8px;
-  font-size: 16px;
+  text-align: center;
   border-radius: 5px;
-  background-color: #78787885;
+  background-color: #ffffff20;
   color: #fff;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 14px;
   font-family: cursive;
   border: none;
 }
+
 .small-para {
   font-size: 12px;
   margin: 2px;
+  text-align: center;
 }
 
 #qr {
   width: 150px;
   margin-bottom: 15px;
 }
-.btns-box{
-        width: 100%;
-        position: absolute;
-        top: 15px;
-        align-items: center;
-        opacity: 0;
-        animation: onLoadBtnsSide 1.2s ease-in-out 2.2s 1 forwards;
+
+.btns-box {
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  align-items: center;
+  opacity: 0;
+  animation: onLoadBtnsSide 1.2s ease-in-out 2.2s 1 forwards;
 }
+
 @keyframes onLoadBtnsSide {
-        0%{     width: 0;
-                display: none;
-                opacity: 0;
-        }30%{
-                top: 20px;
-        }100%{width: 100%;
-                display: flex;
-                opacity: 1;
-                justify-content: space-between;
-                top: 10px;
-        }
+  0% {
+    width: 0;
+    display: none;
+    opacity: 0;
+  }
+
+  30% {
+    top: 20px;
+  }
+
+  100% {
+    width: 100%;
+    display: flex;
+    opacity: 1;
+    justify-content: space-between;
+    top: 10px;
+  }
 }
 
 #pauseBtn,
 #shareBtn {
-width: auto;
+  width: auto;
   padding: 8px 5px;
   z-index: 10;
   margin: 0 10px;
@@ -212,11 +239,12 @@ width: auto;
   background-color: lightblue;
   color: #000;
 }
+
 #shareBtn:hover {
   background-color: orangered;
 }
 
-footer{
+footer {
   position: absolute;
   bottom: 5px;
   color: #222;
@@ -224,7 +252,8 @@ footer{
   font-weight: 400;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   opacity: 0.5;
-  >a{
+
+  >a {
     color: #333;
     font-weight: 500;
   }

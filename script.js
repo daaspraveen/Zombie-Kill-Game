@@ -319,9 +319,12 @@ const qrDownload = () => {
     const qrImg = qrDiv.querySelector("img"); // Get generated QR code as an image
     if (qrImg) {
       const img = new Image();
+      img.crossOrigin = "anonymous";
       img.src = qrImg.src;
+
       const logo = new Image();
-      logo.src = "media/zombiekill-slogo-1.png";
+      logo.crossOrigin = "anonymous";
+      logo.src = "media/logo.png";
 
       img.onload = () => {
         logo.onload = () => {
