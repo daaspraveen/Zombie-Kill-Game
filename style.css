@@ -29,6 +29,9 @@ main{
   align-items: center;
   position: relative;
   z-index: 0;
+  @media screen  and (max-width: 767px) {
+    min-height: 100vh;
+  }
 }
 
 .main-logo {
