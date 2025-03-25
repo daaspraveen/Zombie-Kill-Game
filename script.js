@@ -364,7 +364,9 @@ const qrDownload = () => {
           const link = document.createElement("a");
           link.href = qrCanvas.toDataURL("image/png");
           link.download = "Zombieskill Game-QR.png";
+          startScreen.appendChild(link);
           link.click();
+          startScreen.removeChild(link);
         };
       };
     }
