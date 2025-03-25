@@ -2,12 +2,16 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const startScreen = document.querySelector(".start-screen");
 const gameOverScreen = document.querySelector(".game-over");
+const highestScore = document.getElementById("highestScore");
 const finalScore = document.getElementById("finalScore");
 const tryAgainBtn = document.getElementById("tryAgainBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const shareBtn = document.getElementById("shareBtn");
 
 let playerName = "";
+// localStorage.removeItem("zombieskill-highest-score")
+let highestScoreValue = JSON.parse(localStorage.getItem("zombieskill-highest-score")) || 0;
+console.log('highestScoreValue :' , highestScoreValue)
 let score = 0;
 let gameRunning = false;
 let isPaused = false; // Pause State
@@ -275,6 +279,13 @@ function gameOver() {
   gameRunning = false;
   canvas.style.display = "none";
   gameOverScreen.style.display = "flex";
+  if (highestScoreValue < score) {
+    const expirationTime = Date.now() + 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+    // const data = { score, expires: expirationTime };
+    localStorage.setItem("zombieskill-highest-score", JSON.stringify(score), {expires: expirationTime});
+    highestScoreValue = score
+  }
+  highestScore.innerText=`High Score: ${highestScoreValue}`;
   finalScore.innerHTML = `<b>${playerName}</b>'s score : <b>${score}</b>`;
 }
 
@@ -364,6 +375,7 @@ const qrDownload = () => {
           const link = document.createElement("a");
           link.href = qrCanvas.toDataURL("image/png");
           link.download = "Zombieskill Game-QR.png";
+          link.target="_blank";
           startScreen.appendChild(link);
           link.click();
           startScreen.removeChild(link);

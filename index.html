@@ -35,7 +35,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://zombieskill.netlify.app" />
-    <meta property="og:type" content="game" />
+    <meta property="og:type" content="website" />
 
     <!-- Twitter Card (For Twitter/X Sharing) -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,40 +51,17 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- QR Code Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Zombieskill Game",
-        "url": "https://zombieskill.netlify.app",
-        "image": "https://zombieskill.netlify.app/media/zombieskill-logo.png",
-        "description": "Zombieskill is an action-packed shooting game where you battle waves of zombies. Can you survive the apocalypse?",
-        "author": {
-          "@type": "Person",
-          "name": "Praveenkumar Dasari"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Zombieskill",
-          "url": "https://zombieskill.netlify.app"
-        },
-        "genre": ["Action", "Shooter", "Survival"],
-        "operatingSystem": "Web",
-        "gamePlatform": "Web Browser",
-        "applicationCategory": "Game"
-      }
-      </script>
-      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>      
   </head>
   <body>
-    <img src="media/zombiekill-logo.png" alt="Zombies Kill"  class="main-logo"/>
+    <img src="media/zombieskill-logo.png" alt="Zombies Kill"  class="main-logo"/>
     <nav class="btns-box">
         <button type="button" id="pauseBtn">⏸PAUSE</button>
         <button type="button" id="shareBtn">
-        Share Game
+          Share Game
         </button>
     </nav>
+    <main>
     <div class="start-screen">
       <input type="text" id="playerName" placeholder="Enter Player Name" />
       <!-- <img src="media/bigzombie1-final.png" style="transform:rotate(-90deg)" alt="bigzombie-walk"> -->
@@ -97,6 +74,7 @@
 
     <div class="game-over">
       <h2 class="gameover-head">Game Over</h2>
+      <h4 id="highestScore" class="highest-score"></h4>
       <p id="finalScore" class="final-score-para"></p>
       <button type="button"
         onclick="reset()"
@@ -107,6 +85,7 @@
       </button>
       <button type="button" class="feedback-btn"><a href="mailto:devdas.web+Zombieskillgame@gmail.com" rel="no_opener">Send Feedback</a></button>
     </div>
+  </main>
     <footer>Developed by <a href="https://praveend.netlify.app" target="_blank" rel="no_opener">Praveen</a></footer>
 
     <script src="script.js"></script>
