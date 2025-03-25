@@ -321,7 +321,7 @@ const qrDownload = () => {
       const img = new Image();
       img.src = qrImg.src;
       const logo = new Image();
-      logo.src = "media/zombieskill-slogo-1.png";
+      logo.src = "media/zombiekill-slogo-1.png";
 
       img.onload = () => {
         logo.onload = () => {
