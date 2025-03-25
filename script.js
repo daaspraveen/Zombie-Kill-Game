@@ -286,12 +286,12 @@ tryAgainBtn.addEventListener("click", () => {
 
 // Share Button Function
 shareBtn.addEventListener("click", () => {
-  const gameUrl = "https://zombiekill.netlify.app";
+  const gameUrl = "https://zombieskill.netlify.app";
   if (navigator.share) {
     navigator
       .share({
-        title: "ZombieKill Game",
-        text: "Come and play the ZombieKill game!",
+        title: "Zombieskill Game",
+        text: "Come and play the Zombieskill game!",
         url: gameUrl,
       })
       .catch((err) => console.log("Error sharing:", err));
@@ -300,9 +300,9 @@ shareBtn.addEventListener("click", () => {
   }
 });
 
-// Download QR of ZombieKill Game
+// Download QR of Zombieskill Game
 const qrDownload = () => {
-  const gameUrl = "https://zombiekill.netlify.app";
+  const gameUrl = "https://zombieskill.netlify.app";
   const qrCanvas = document.createElement("canvas");
   const ctx = qrCanvas.getContext("2d");
 
@@ -321,7 +321,7 @@ const qrDownload = () => {
       const img = new Image();
       img.src = qrImg.src;
       const logo = new Image();
-      logo.src = "media/zombiekill-slogo-1.png";
+      logo.src = "media/zombieskill-slogo-1.png";
 
       img.onload = () => {
         logo.onload = () => {
@@ -343,7 +343,7 @@ const qrDownload = () => {
           ctx.fillStyle = "black";
           ctx.font = "700 20px Arial";
           ctx.textAlign = "center";
-          ctx.fillText("Zombie Kill Game", qrCanvas.width / 2, 330);
+          ctx.fillText("Zombies Kill Game", qrCanvas.width / 2, 330);
 
           ctx.fillStyle = "red";
           ctx.font = "900 28px Arial";
@@ -352,7 +352,7 @@ const qrDownload = () => {
           ctx.fillStyle = "black";
           ctx.font = "600 14px Arial";
           ctx.fillText(
-            "https://zombiekill.netlify.app",
+            "https://zombieskill.netlify.app",
             qrCanvas.width / 2,
             380
           );
@@ -360,7 +360,7 @@ const qrDownload = () => {
           // Download QR
           const link = document.createElement("a");
           link.href = qrCanvas.toDataURL("image/png");
-          link.download = "ZombieKill_QR.png";
+          link.download = "Zombieskill Game-QR.png";
           link.click();
         };
       };
