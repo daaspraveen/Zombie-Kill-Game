@@ -23,15 +23,12 @@ body {
 }
 main{
   width: 100%;
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 0;
-  @media screen  and (max-width: 767px) {
-    min-height: 100vh;
-  }
 }
 
 .main-logo {
