@@ -11,7 +11,7 @@ const shareBtn = document.getElementById("shareBtn");
 let playerName = "";
 // localStorage.removeItem("zombieskill-highest-score")
 let highestScoreValue = JSON.parse(localStorage.getItem("zombieskill-highest-score")) || 0;
-console.log('highestScoreValue :' , highestScoreValue)
+// console.log('highestScoreValue :' , highestScoreValue)
 let score = 0;
 let gameRunning = false;
 let isPaused = false; // Pause State
@@ -36,8 +36,8 @@ enemyImg.src = "media/zombie gifs/zombie.gif"; // 🔥 Enemy Image
 const bigEnemyImg = new Image();
 bigEnemyImg.src = "media/bigzombie1-final.png"; // 🔥 Enemy Image
 
-bigEnemyImg.onload = () => console.log("Big Enemy Image Loaded");
-bigEnemyImg.onerror = () => console.error("Failed to load big enemy image");
+// bigEnemyImg.onload = () => console.log("Big Enemy Image Loaded");
+// bigEnemyImg.onerror = () => console.error("Failed to load big enemy image");
 
 // Pause/Play Function
 pauseBtn.addEventListener("click", () => {

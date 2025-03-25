@@ -33,9 +33,10 @@ main{
 
 .main-logo {
   width: 100%;
+  object-fit: contain;
+  object-position: center center;
   aspect-ratio: 1/1;
-  max-width: 80px;
-  min-width: 40px;
+  min-width: 35px;
   animation: onLoadLogo 2s ease-in-out 0s 1 forwards;
   position: absolute;
   z-index: 15;
