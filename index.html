@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Description -->
+    <title>Zombiekill Game</title>
+    <meta name="description" content="Zombiekill is an action-packed shooting game where you battle waves of zombies. Can you survive the apocalypse? Play now!" />
+
+    <!-- GOOGLE ADSENSE -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8905084515386518"
+     crossorigin="anonymous"></script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26YC27XJRT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-26YC27XJRT');
+    </script>
+
+    <!-- Keywords (SEO) -->
+    <meta name="keywords" content="Zombie Game, Shooting Game, Survival Game, Play Online, HTML5 Game, Multiplayer Game, Action Game" />
+
+    <!-- Author -->
+    <meta name="author" content="Praveenkumar Dasari" />
+
+    <!-- Open Graph (For Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Zombiekill Game - Can You Survive?" />
+    <meta property="og:description" content="Battle waves of zombies in this action-packed survival game. Challenge your friends and see who lasts the longest!" />
+    <meta property="og:image" content="https://zombiekill.netlify.app/media/zombiekill-logo.png" />
+    <meta property="og:url" content="https://zombiekill.netlify.app" />
+    <meta property="og:type" content="game" />
+
+    <!-- Twitter Card (For Twitter/X Sharing) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zombiekill Game - Play Now!" />
+    <meta name="twitter:description" content="Test your survival skills in Zombiekill! Fight against endless waves of zombies and compete with your friends." />
+    <meta name="twitter:image" content="https://zombiekill.netlify.app/media/zombiekill-logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="media/zombiekill-slogo-1.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="media/zombiekill-slogo-1.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <img src="media/zombiekill-logo.png" alt="Zombie Kill"  class="main-logo"/>
+    <nav class="btns-box">
+        <button type="button" id="pauseBtn">⏸PAUSE</button>
+        <button type="button" id="shareBtn">
+        Share Game
+        </button>
+    </nav>
+    <div class="start-screen">
+      <input type="text" id="playerName" placeholder="Enter Player Name" />
+      <!-- <img src="media/bigzombie1-final.png" style="transform:rotate(-90deg)" alt="bigzombie-walk"> -->
+      <button type="button" onclick="startGame()">Start Game</button>
+      <p class="small-para">or Download Game QR and Invite Friends</p>
+      <button type="button" onclick="qrDownload()">Download QR</button>
+    </div>
+
+    <canvas></canvas>
+
+    <div class="game-over">
+      <h2 class="gameover-head">Game Over</h2>
+      <p id="finalScore" class="final-score-para"></p>
+      <button type="button"
+        onclick="reset()"
+        id="tryAgainBtn"
+        class="tryAgainBtn"
+      >
+        Try Again
+      </button>
+      <button type="button" class="feedback-btn"><a href="mailto:devdas.web+Zombiekillgame@gmail.com" rel="no_opener">Send Feedback</a></button>
+    </div>
+    <footer>Developed by <a href="https://praveend.netlify.app" target="_blank" rel="no_opener">Praveen</a></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
